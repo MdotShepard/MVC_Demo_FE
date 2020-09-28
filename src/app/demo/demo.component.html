@@ -1,5 +1,29 @@
-<mat-form-field class="example-full-width">
-  <mat-label>Input value</mat-label>
-  <input #userInput (keyup.enter)="send(userInput.value)" matInput placeholder="" value="" />
-</mat-form-field>
-<button mat-flat-button color="warn" (click)="send(userInput.value)">Just send it!</button>
+<h1>
+  MVC - Demo
+</h1>
+<div class="input_div">
+  <mat-form-field class="inputfield">
+    <mat-label>Input value</mat-label>
+    <input
+      #userInput
+      (keyup.enter)="send(userInput.value)"
+      matInput
+      placeholder=""
+      value=""
+    />
+  </mat-form-field>
+</div>
+<div class="button_div">
+  <button class="button" mat-flat-button color="primary" (click)="getHello()">
+    Hello Programm!
+  </button>
+  <button class="button" mat-flat-button color="warn" (click)="send(userInput.value)">
+    Just send it!
+  </button>
+</div>
+<div>
+  <br>
+  <p class="paragraph">Output:</p>
+  <br>
+  <h2 class="paragraph" id="output"></h2>
+</div>
