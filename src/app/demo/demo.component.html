@@ -1,0 +1,5 @@
+<mat-form-field class="example-full-width">
+  <mat-label>Input value</mat-label>
+  <input #userInput (keyup.enter)="send(userInput.value)" matInput placeholder="" value="" />
+</mat-form-field>
+<button mat-flat-button color="warn" (click)="send(userInput.value)">Just send it!</button>
